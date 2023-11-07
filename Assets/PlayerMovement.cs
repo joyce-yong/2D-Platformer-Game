@@ -9,8 +9,9 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
 
     private float dirX = 0f;
-    [SerializeField] private moveSpeed = 7f;
-    [SerializeField] private jumpForce = 14f;
+
+    [SerializeField] private float moveSpeed = 7f;
+    [SerializeField] private float jumpForce = 14f;
 
     // either use [SerializeField] private float or make it public
     // int wholeNumber = 16;
