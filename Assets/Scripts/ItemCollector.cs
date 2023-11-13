@@ -11,11 +11,14 @@ public class ItemCollector : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI cherriesText;
 
+    [SerializeField] private AudioSource collectSoundEffect;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //if game object collide with smthg(check if its cherry with the tag)
         if (collision.gameObject.CompareTag("Cherry"))
         {
+            collectSoundEffect.Play();
             Destroy(collision.gameObject);
             cherries++;
             //this is ^ equivalent to cherries = cherries +1
